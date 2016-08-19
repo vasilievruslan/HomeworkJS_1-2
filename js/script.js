@@ -26,19 +26,13 @@ for (var i = 0; i <= 4; i++) {
 
 console.log("arr", names);
 
-function checkNames(arr, val) {
-    return arr.some(function(arrVal) {
-        return val === arrVal;
-    });
-}
-
 var confirmName = prompt('Confirm Your Name')
 
-if(checkNames(names, confirmName)){
-	alert('success')
-} 
-else{
-	alert('error')
+for(var x = 0; names[x] == confirmName; x++){
+	alert('error');
 }
+
+alert(confirmName + ', you have successfully logged!');
+
 
 
