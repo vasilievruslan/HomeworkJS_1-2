@@ -1,19 +1,19 @@
 // Part one
 
-var numbInput = prompt('enter number'),
-	powInput = prompt('enter power');
+// var numbInput = prompt('enter number'),
+// 	powInput = prompt('enter power');
 
-function pow(numbInput, powInput) {
-	var result = 1;
+// function pow(numbInput, powInput) {
+// 	var result = 1;
 
-	for (var i = 0; i < powInput; i++) {
-		result *= numbInput;
-	}
+// 	for (var i = 0; i < powInput; i++) {
+// 		result *= numbInput;
+// 	}
 
-	return result;
-}
+// 	return result;
+// }
 
-alert(pow(numbInput, powInput));
+// alert(pow(numbInput, powInput));
 
 // Part two
 
@@ -26,13 +26,20 @@ for (var i = 0; i <= 4; i++) {
 
 console.log("arr", names);
 
-var confirmName = prompt('Confirm Your Name')
 
-for(var x = 0; names[x] == confirmName; x++){
-	alert('error');
+var confirmName = prompt('confirm your name')
+
+function checkName(arr, val) {
+    return arr.some(function(arrVal) {
+        return val === arrVal;
+    });
 }
 
-alert(confirmName + ', you have successfully logged!');
-
+if(checkName(names, confirmName) == true){
+	alert(confirmName + ', you have successfully logged!');
+}
+else{
+	alert('error');
+}
 
 
